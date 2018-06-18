@@ -1,4 +1,4 @@
-# Exercise x-x
+# Exercise 0-0
 
 ## Problem
 
