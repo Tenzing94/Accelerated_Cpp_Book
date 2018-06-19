@@ -1,10 +1,8 @@
 # Exercise 0-1
 
 ## Problem
+What does the following statement do?  
+`3+4;`
 
 ## Solution
-
-### Code
-```Cpp
-// code
-```
+`3+4;` is an expression that yields `7` as its result, and has no side effects.
