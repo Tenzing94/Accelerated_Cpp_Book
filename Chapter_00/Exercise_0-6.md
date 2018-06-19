@@ -9,4 +9,4 @@ int main() {{{{{{ std::cout << "Hello, world!" << std::endl; }}}}}}
 ## Solution
 Yes. This is a valid program.
 
-While ommiting the `return 0;` statement is allowed in the `main` function, it is good programming practice to include it.
+While omitting the `return 0;` statement is allowed in the `main` function, it is good programming practice to include it.
