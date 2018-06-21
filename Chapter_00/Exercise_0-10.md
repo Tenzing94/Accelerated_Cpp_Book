@@ -32,6 +32,5 @@ main
   return
     0
     ;
-
 }
 ```
