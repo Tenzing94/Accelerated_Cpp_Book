@@ -1,7 +1,7 @@
 # Exercise 0-7
 
 ## Problem
-Is this a valid program? Why or why not?
+What about this one?
 ```Cpp
 #include <iostream>
 int main()
