@@ -1,6 +1,7 @@
 # Exercise 1-0
 
 ## Problem
+Compile, execute, and test the programs in this chapter.
 
 ## Solution
 
