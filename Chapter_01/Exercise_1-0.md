@@ -35,7 +35,7 @@ Second Program:
 
 int main()
 {
-	std::cout << "Please enter your frist name: ";
+	std::cout << "Please enter your first name: ";
 	std::string name;
 	std::cin >> name;
 
@@ -49,7 +49,7 @@ int main()
 	// build the first and fifth lines of the output
 	const std::string first(second.size(),'*');
 
-	//write it all
+	// write it all
 	std::cout << std::endl;
 	std::cout << first << std::endl;
 	std::cout << second << std::endl;
