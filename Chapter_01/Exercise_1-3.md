@@ -20,8 +20,4 @@ int main()
 }
 ```
 ## Solution
-
-### Code
-```Cpp
-// code
-```
+Yes, this program is valid. By making use of the `{ }`, we made two variables with the same name `s`. This program shows how a variable is local to the scope in which it is defined.
