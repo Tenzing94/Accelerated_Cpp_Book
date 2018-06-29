@@ -11,8 +11,3 @@ Are the following definitions valid? Why or why not?
 The first definition is valid.
 
 The second definition is NOT valid. According to the book, we cannot concatenate two string literals. 
-
-### Code
-```Cpp
-// code
-```
