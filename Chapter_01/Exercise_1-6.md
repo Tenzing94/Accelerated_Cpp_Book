@@ -26,8 +26,8 @@ int main()
 When we write `Samuel Beckett`, two words get stored in the **buffer**. Remember that inside a buffer, words are separated by a blank space. 
 
 1. So, after the first `std::cin >> name;`, there are two words in the buffer.
-2. In the next line, the word `Samuel` gets removed from the buffer and is displayed in your computer. The buffer now has one word `Beckett`.
+2. In the next line, the word `Samuel` gets removed from the buffer and is displayed on your computer. The buffer now has one word `Beckett`.
 3. In the next line, `std::cin >> name;` is ignored because the buffer already has a word.
-4. In the next line, `Beckett` gets removed from the buffer and is displayed in your computer.
+4. In the next line, `Beckett` gets removed from the buffer and is displayed on your computer.
 
 NOTE: The program stops and asks for the user's input only when the buffer is empty. As we saw in the program above, as long as there is a word in the buffer, the program will not bother to ask the user for input.
