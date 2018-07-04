@@ -34,7 +34,7 @@ int main()
 	cin >> verticalPad;
 
 	int horizontalPad;
-	cout << "Please enter the amount of vertical padding required: ";
+	cout << "Please enter the amount of horizontal padding required: ";
 	cin >> horizontalPad;
 
 	// the number of rows and columns to write
