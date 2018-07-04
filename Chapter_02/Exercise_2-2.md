@@ -4,7 +4,7 @@
 Change the framing program so that it uses a different amount of space to separate the sides from the greeting than it uses to separate the top and bottom borders from the greeting.
 
 ## Solution
-
+In the previous Exercises, we used a single variable `pad` to define the padding that surrounds the greeting. In the program below, I created two separate variables `horizontalPad` and `verticalPad`.
 ### Code
 ```Cpp
 #include <iostream>
