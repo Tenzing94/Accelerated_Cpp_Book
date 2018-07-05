@@ -10,6 +10,9 @@ The framing program writes the mostly blank lines that separate the borders from
 /* Note that in addition to making the changes requried by this exericse, 
 I also changed the program so that the top and bottom borders also get written 
 in a single output expression.
+
+I also changed the program so that we can have different amount of space to 
+separate the sides from the greeting than top and bottom of the greeting.
 */
 #include <iostream>
 #include <string>
@@ -35,16 +38,20 @@ int main()
 	cout << endl;
 
 	// the number of blanks surrounding the greeting
-	cout << "Please enter the amount of padding you require: ";
-	int pad;
-	cin >> pad;
+	cout << "Please enter the amount of horizontal padding you require: ";
+	int horizontalPad;
+	cin >> horizontalPad;
+
+	cout << "Please enter the amount of vertical padding you require: ";
+	int verticalPad;
+	cin >> verticalPad;
 
 	// the number of rows and columns to write
-	const int rows = pad * 2 + 3;
-	const string::size_type cols = greeting.size() + pad * 2 + 2;
+	const int rows = verticalPad * 2 + 3;
+	const string::size_type cols = greeting.size() + horizontalPad * 2 + 2;
 
 	const string padTopBottom(cols - 2, ' ');//Padding between top/bottom border and greeting
-	const string padLeftRight(pad, ' '); //Padding between left,right border and greeting
+	const string padLeftRight(horizontalPad, ' '); //Padding between left,right border and greeting
 
 	// All the rows
 	const string topBottomRow(cols, '*');  //Top and bottom row
@@ -64,7 +71,7 @@ int main()
 		while (c != cols)
 		{
 			// are we on the greeting row?
-			if (r == pad + 1)
+			if (r == verticalPad + 1)
 			{
 				cout << greetingRow;
 				c += greetingRow.size();
