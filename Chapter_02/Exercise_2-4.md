@@ -63,7 +63,7 @@ int main()
 		// invariant: we have written c characters so far in the current row
 		while (c != cols)
 		{
-			// is it time to write the greeting?
+			// are we on the greeting row?
 			if (r == pad + 1)
 			{
 				cout << greetingRow;
@@ -75,7 +75,7 @@ int main()
 				cout << topBottomRow;
 				c += topBottomRow.size();
 			}
-			else
+			else 
 			{
 				cout << nonGreetingRow;
 				c += nonGreetingRow.size();
