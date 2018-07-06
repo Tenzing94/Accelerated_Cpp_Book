@@ -1,4 +1,4 @@
-# Exercise x-x
+# Exercise 2-9
 
 ## Problem
 Write a program that asks the user to enter two numbers and tells the user which number is larger than the other.
