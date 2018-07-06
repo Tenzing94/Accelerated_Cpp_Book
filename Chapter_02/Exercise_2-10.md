@@ -6,7 +6,7 @@ Explain each of the uses of `std::` in the following program:
 int main()
 {
   int k = 0;
-  while (k != n){     // invariant: we have written k asterisks so far
+  while (k != n) {     // invariant: we have written k asterisks so far
     using std::cout;
     cout << "*";
     ++k;
