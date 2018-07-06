@@ -95,3 +95,4 @@ int main()
 	return 0;
 }
 ```
+NOTE: One downside to the code above is that I'm using variables `topBottomRow` `greetingRow` `nonGreetingRow` to store the strings that will be printed on the screen. On the previous exercise, we only had the `greeting` stored in a variable, while the frame was not stored in a variable. Not a big deal, but something to keep in mind.
