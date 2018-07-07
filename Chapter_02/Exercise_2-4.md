@@ -95,4 +95,4 @@ int main()
 	return 0;
 }
 ```
-NOTE: One downside to the code above is that I'm using variables `topBottomRow` `greetingRow` `nonGreetingRow` to store the strings that will be printed on the screen. On the previous exercise, we only had one string,`greeting`, while the rest of the frame was built and displayed on the screen (but not stored on a variable) one character (`*` or `  `) at a time.
+NOTE: One downside to the code above is that I'm using variables `topBottomRow` `greetingRow` `nonGreetingRow` to store the strings that will be printed on the screen. On the previous exercise, we only had one string,`greeting`, while the rest of the frame was built and displayed on the screen (but not stored on a variable) one character (`*` or ` `) at a time.
