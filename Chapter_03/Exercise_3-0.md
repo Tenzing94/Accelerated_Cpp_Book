@@ -115,7 +115,7 @@ int main()
 		return 1;
 	}
 
-	// sort the grades
+	// sort the grades in nondecreasing order
 	sort(homework.begin(), homework.end());
 
 	// compute the median homework grade
