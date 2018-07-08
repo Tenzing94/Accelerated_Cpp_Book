@@ -4,9 +4,8 @@
 Compile, execute, and test the programs in this chapter.
 
 ## Solution
-
-First Program:
 ### Code
+First Program:
 ```Cpp
 // ask for a person's name, and greet the person
 #include <iostream>
