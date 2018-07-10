@@ -37,6 +37,8 @@ int main()
         cout << "No words were entered. Program Terminated." << endl;
         return 1;
     }
+    
+    // if only 1 word was entered, then that word is both the longest and shortest string
     else if (size_of_words == 1)
     {
     	shortestString = longestString = words[0].size();
