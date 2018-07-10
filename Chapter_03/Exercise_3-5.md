@@ -9,7 +9,6 @@ Note: In this program, we will not bother with final and midterm grades. The pro
 
 ### Code
 ```Cpp
-#include <algorithm> // for sort, begin, end
 #include <iomanip> // for setprecision
 #include <ios> // for streamsize
 #include <iostream>
@@ -20,7 +19,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::setprecision;
-using std::sort;
 using std::streamsize;
 using std::string;
 using std::vector;
