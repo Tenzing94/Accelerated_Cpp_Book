@@ -8,8 +8,7 @@ _Hint_: One proof strategy is to assume that we can discard a value, and then fi
 
 ### Proof by Contradiction
 
-#### Assumption
-A vector holds an unknown amount of values. Removing value(s) from the vector should not affect the median of the values. This means that the median of the values with some value(s) removed should equal the median of the values without any removed.
+Assumption: A vector holds an unknown amount of values. Removing value(s) from the vector should not affect the median of the values. This means that the median of the values with some value(s) removed should equal the median of the values without any removed.
 
 This sounds tricky. Let us get a better picture with an example.
 - Lets say we have a vector with the following values `1,2,3,4,5`. The median is `3`
