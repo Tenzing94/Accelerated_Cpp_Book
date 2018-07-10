@@ -5,7 +5,7 @@ Write a program that will keep track of grades for several students at once. The
 
 ## Solution
 
-Note: In this program, we will not bother with final and midterm grades. The program will take a fixed number of homework grades per student as input, and output the student's name along with his/her mean (average) homework score.
+Note: In this program, we will not bother with final and midterm grades. The program will take a fixed number of homework grades per student as input, and output the student's name along with his/her mean (average) homework grade.
 
 ### Code
 ```Cpp
@@ -41,15 +41,15 @@ int main()
 
 		cout << "Please enter " << num_of_hw << " homeworks: ";
 
-		double total_score = 0;
-		double homework_score;
+		double total_grade = 0;
+		double homework_grade;
 
 		for (vec_sz i = 0; i != num_of_hw; ++i)
 		{
-			cin >> homework_score;
-			total_score += homework_score;
+			cin >> homework_grade;
+			total_grade += homework_grade;
 		}
-		studentMeanGrade.push_back(total_score / num_of_hw);
+		studentMeanGrade.push_back(total_grade / num_of_hw);
 
 		cout << "Either enter another student's name, or exit via Control+D.";
 		cout << endl;
