@@ -4,7 +4,7 @@
 Write a program to compute and print the quartiles (that is, the quarter of the numbers with the largest values, the next highest quarter, and so on) of a set of integers.
 
 ## Solution
-Note: All the credit goes to Johnny Chan for a wonderful explanation of this problem [[Link]](http://mathalope.co.uk/2014/07/18/accelerated-c-solution-to-exercise-3-2/). My implemention (code) is modeled heavily after his implemention.
+Note: Credit goes to Johnny Chan for a wonderful explanation of this problem [[Link]](http://mathalope.co.uk/2014/07/18/accelerated-c-solution-to-exercise-3-2/). My implemention (code) is modeled heavily after his implemention.
 
 ### Code
 ```Cpp
