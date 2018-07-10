@@ -19,7 +19,7 @@ using std::vector;
 
 int main()
 {
-	cout << "Please enter all of the words, followed by Control+D: ";
+    cout << "Please enter all of the words, followed by Control+D: ";
     vector<string> words;
     string word;
 
