@@ -60,11 +60,12 @@ int main()
     vec_sz indexM, indexML, indexMU; // vector indices
     double median, medianLower, medianUpper;         // quartile values
 
+    indexM = N / 2;
+    indexML = indexM / 2;
+
     if (N % 4 == 0)
     {
     	datumDistr = "[0 0 0]";
-        indexM = N / 2;
-        indexML = indexM / 2;
         indexMU = indexM + indexML;
 
         medianLower= (integerSet[indexML] + integerSet[indexML-1]) / 2;
@@ -74,8 +75,6 @@ int main()
     else if (N % 4 == 1)
     {
     	datumDistr = "[0 1 0]";
-        indexM = N / 2;
-        indexML = indexM / 2;
         indexMU = indexM + indexML + 1;
  
         datumDistr = "[0 0 0]";
@@ -86,8 +85,6 @@ int main()
     else if (N % 4 == 2)
     {
     	datumDistr = "[1 0 1]";
-        indexM = N / 2;
-        indexML = indexM / 2;
         indexMU = indexM + indexML;
  
         medianLower = integerSet[indexML];
@@ -97,8 +94,6 @@ int main()
     else if (N % 4 == 3)
     {
     	datumDistr = "[1 1 1]";
-        indexM = N / 2;
-        indexML = indexM / 2;
         indexMU = indexM + indexML + 1;
  
         medianLower = integerSet[indexML];
