@@ -37,11 +37,11 @@ int main()
 	{
 		studentNames.push_back(studentName);
 
-		cout << "Please enter the midterm grade: ";
+		cout << "Please enter the midterm exam grade: ";
 		double midterm;
 		cin >> midterm;
 
-		cout << "Please enter the final grade: ";
+		cout << "Please enter the final exam grade: ";
 		double final;
 		cin >> final;
 
