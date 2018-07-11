@@ -5,8 +5,6 @@ Write a program that will keep track of grades for several students at once. The
 
 ## Solution
 
-Note: In this program, we will not bother with final and midterm grades. The program will take a fixed number of homework grades per student as input, and output the student's name along with his/her mean (average) homework grade.
-
 ### Code
 ```Cpp
 #include <iomanip> // for setprecision
@@ -39,30 +37,41 @@ int main()
 	{
 		studentNames.push_back(studentName);
 
+		cout << "Please enter the midterm grade: ";
+		double midterm;
+		cin >> midterm;
+
+		cout << "Please enter the final grade: ";
+		double final;
+		cin >> final;
+
 		cout << "Please enter " << num_of_hw << " homeworks: ";
 
-		double total_grade = 0;
-		double homework_grade;
+		double total_hw = 0;
+		double homework;
 
 		for (vec_sz i = 0; i != num_of_hw; ++i)
 		{
-			cin >> homework_grade;
-			total_grade += homework_grade;
+			cin >> homework;
+			total_hw += homework;
 		}
-		studentMeanGrade.push_back(total_grade / num_of_hw);
+
+		double final_grade = 0.2 * midterm + 0.4 * final + 0.4 * total_hw / num_of_hw;
+
+		studentMeanGrade.push_back(final_grade);
 
 		cout << "Either enter another student's name, or exit via Control+D.";
 		cout << endl;
 	}
 
 	cout << "-------------------------------------------------------------" << endl;
-	cout << "Here are the names and average (mean) grades of the students." << endl;
+	cout << "Here are the names and final grades of the students." << endl;
 	cout << "-------------------------------------------------------------" << endl;
 
 	streamsize prec = cout.precision();
 	for (vec_sz i = 0; i != studentNames.size(); ++i)
 	{
-		cout << "The mean homework grade of student with name " << studentNames[i] 
+		cout << "The final grade of student with name " << studentNames[i] 
 		<< " is " << setprecision(3) << studentMeanGrade[i] << endl;
 	}
 	setprecision(prec);
