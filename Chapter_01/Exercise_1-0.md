@@ -4,8 +4,10 @@
 Compile, execute, and test the programs in this chapter.
 
 ## Solution
+
 ### Code
-First Program:
+
+#### First Program:
 ```Cpp
 // ask for a person's name, and greet the person
 #include <iostream>
@@ -26,7 +28,7 @@ int main()
 }
 ```
 
-Second Program:
+#### Second Program:
 ```Cpp
 // ask for a person's name, and generate a framed greeting
 #include <iostream>
