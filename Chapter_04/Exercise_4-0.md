@@ -183,3 +183,194 @@ istream& read_hw(istream& in, vector<double>& hw)
 	return in;
 }
 ```
+
+#### median.h
+```Cpp
+#ifndef GUARD_median_h
+#define GUARD_median_h
+
+// median.h
+#include <vector>
+
+double median(std::vector<double>);
+
+#endif
+```
+
+#### median.cpp
+```Cpp
+// source file for the median function
+
+#include <algorithm> // sort
+#include <stdexcept> // domain_error
+#include <vector> 
+#include "median.h"
+
+using std::domain_error;
+using std::sort;
+using std::vector;
+
+// compute the median of a vector<double>
+// note that calling this function copies the entire argument vector
+double median(vector<double> vec)
+{
+	typedef vector<double>::size_type vec_sz;
+
+	vec_sz size = vec.size();
+	if (size == 0)
+		throw domain_error("median of an empty vector");
+
+	sort(vec.begin(), vec.end());
+
+	vec_sz mid = size/2;
+
+	return size % 2 == 0 ? (vec[mid] + vec[mid-1]) / 2 : vec[mid];
+}
+```
+
+#### grade.h
+```Cpp
+#ifndef GUARD_grade_h
+#define GUARD_grade_h
+
+// grade.h
+#include <vector>
+#include "Student_info.h"
+
+double grade(double, double, double);
+
+double grade(double, double, const std::vector<double>&);
+
+double grade(const Student_info&);
+
+#endif
+```
+
+#### grade.cpp
+```Cpp
+#include <algorithm>
+#include <iomanip> // for setprecision
+#include <ios> // for streamsize
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+#include "grade.h"
+#include "Student_info.h"
+
+using std::cin;
+using std::cout;
+using std::domain_error;
+using std::endl;
+using std::max;
+using std::setprecision;
+using std::sort;
+using std::streamsize;
+using std::string;
+using std::vector;
+
+int main()
+{
+	vector<Student_info> students;
+	Student_info record;
+	string::size_type maxlen = 0; // the length of the longest name
+
+	// read and store all the students data.
+	// Invariant: students contains all the student records read so far
+	// maxlen contains the length of the longest name in students
+	while (read(cin, record)) 
+	{
+		// find length of longest name
+		maxlen = max(maxlen, record.name.size());
+		students.push_back(record);
+	}
+
+	// alphabetize the student records
+	sort(students.begin(), students.end(), compare);
+
+	// write the names and grades
+	for (vector<Student_info>::size_type i = 0; i != students.size(); ++i)
+	{
+		// write the name, padded on the right to maxlen + 1 characters
+		cout << students[i].name << string(maxlen + 1 - students[i].name.size(), ' ');
+
+		// compute and write the grade
+		try 
+		{
+			double final_grade = grade(students[i]);
+			streamsize prec = cout.precision();
+			cout << setprecision(3) << final_grade << setprecision(prec);
+		}
+		catch (domain_error e) {
+			cout << e.what();
+		}
+		cout << endl;
+	}
+	return 0;
+}
+```
+
+#### Ex4-0.cpp
+```Cpp
+#include <algorithm>
+#include <iomanip> // for setprecision
+#include <ios> // for streamsize
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+#include "grade.h"
+#include "Student_info.h"
+
+using std::cin;
+using std::cout;
+using std::domain_error;
+using std::endl;
+using std::max;
+using std::setprecision;
+using std::sort;
+using std::streamsize;
+using std::string;
+using std::vector;
+
+int main()
+{
+	vector<Student_info> students;
+	Student_info record;
+	string::size_type maxlen = 0; // the length of the longest name
+
+	// read and store all the students data.
+	// Invariant: students contains all the student records read so far
+	// maxlen contains the length of the longest name in students
+	while (read(cin, record)) 
+	{
+		// find length of longest name
+		maxlen = max(maxlen, record.name.size());
+		students.push_back(record);
+	}
+
+	// alphabetize the student records
+	sort(students.begin(), students.end(), compare);
+
+	// write the names and grades
+	for (vector<Student_info>::size_type i = 0; i != students.size(); ++i)
+	{
+		// write the name, padded on the right to maxlen + 1 characters
+		cout << students[i].name << string(maxlen + 1 - students[i].name.size(), ' ');
+
+		// compute and write the grade
+		try 
+		{
+			double final_grade = grade(students[i]);
+			streamsize prec = cout.precision();
+			cout << setprecision(3) << final_grade << setprecision(prec);
+		}
+		catch (domain_error e) {
+			cout << e.what();
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+```
