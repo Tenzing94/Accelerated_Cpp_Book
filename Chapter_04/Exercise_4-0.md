@@ -115,6 +115,7 @@ int main()
 	return 0;
 }
 ```
+------------------------------------------------------------------------------------------------------------------
 
 ### Second Program (4.5/70) - This program calcuates multiple students' grades. This program is separated into multiple files
 
