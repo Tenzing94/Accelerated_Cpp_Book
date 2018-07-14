@@ -115,3 +115,71 @@ int main()
 	return 0;
 }
 ```
+
+### Second Program (4.5/70) - This program calcuates multiple students' grades. This program is separated into multiple files
+
+#### Student_info.h
+```Cpp
+#ifndef GUARD_Student_info
+#define GUARD_Student_info
+
+// Student_info.h header file
+#include <iostream>
+#include <string>
+#include <vector>
+
+struct Student_info {
+	std::string name;
+	double midterm, final;
+	std::vector<double> homework;
+};
+
+bool compare(const Student_info&, const Student_info&);
+
+std::istream& read(std::istream&, Student_info&);
+
+std::istream& read_hw(std::istream&, std::vector<double>&);
+
+#endif
+```
+
+#### Student_info.cpp
+```Cpp
+// source file for Student_info related functions
+#include "Student_info.h"
+
+using std::istream;
+using std::vector;
+
+bool compare(const Student_info& x, const Student_info& y)
+{
+	return x.name < y.name;
+}
+
+istream& read(istream& is, Student_info& s)
+{
+	// rad and store the student's name and midterm and final exam grades
+	is >> s.name >> s.midterm >> s.final;
+
+	read_hw(is, s.homework); // read and store all the student's homework grades
+	return is;
+}
+
+// read homework grades from an input stream into a 'vector'
+istream& read_hw(istream& in, vector<double>& hw)
+{
+	if (in) {
+		// get rid of previous contents
+		hw.clear();
+
+		// read homework grades
+		double x;
+		while (in >> x)
+			hw.push_back(x);
+
+		// clear the stream so that input will work for the next student
+		in.clear();
+	}
+	return in;
+}
+```
