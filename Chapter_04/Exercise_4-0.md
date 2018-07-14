@@ -248,6 +248,7 @@ double grade(const Student_info&);
 
 #### grade.cpp
 ```Cpp
+// source file for grade functions
 #include <stdexcept>
 #include <vector>
 #include "grade.h"
