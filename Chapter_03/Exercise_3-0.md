@@ -7,7 +7,7 @@ Compile, execute, and test the programs in this chapter.
 
 ### Code
 
-First Program (Calculating the mean of the homeworks)
+#### First Program (Calculating the mean of the homeworks)
 ```Cpp
 #include <iomanip> // for setprecision
 #include <ios> // for streamsize
@@ -64,7 +64,7 @@ int main()
 }
 ```
 
-Second Program (Calculating the median of the homeworks)
+#### Second Program (Calculating the median of the homeworks)
 ```Cpp
 #include <algorithm> // for sort, begin, end
 #include <iomanip> // for setprecision
