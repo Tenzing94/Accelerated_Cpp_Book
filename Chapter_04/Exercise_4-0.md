@@ -189,7 +189,7 @@ istream& read_hw(istream& in, vector<double>& hw)
 #ifndef GUARD_median_h
 #define GUARD_median_h
 
-// median.h
+// median.h header file
 #include <vector>
 
 double median(std::vector<double>);
