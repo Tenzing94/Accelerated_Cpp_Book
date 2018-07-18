@@ -37,4 +37,25 @@ list<Student_info> extract_fails(list<Student_info>& students)
 
 ----------------------------------------------------------------------------------------------------------
 
-### Second Program (x.x/xx) - //
+### Second Program (x.x/xx) - Spliting a line of text (string) into individual words and storing them in a vector.
+
+split.h
+```Cpp
+#ifndef GUARD_SPLIT_H
+#define GUARD_SPLIT_H
+ 
+#include <vector>
+#include <string>
+ 
+std::vector<std::string> split(const std::string&);
+ 
+#endif // GUARD_SPLIT_H
+```
+
+split.cpp
+```Cpp
+```
+
+main.cpp
+```
+```
