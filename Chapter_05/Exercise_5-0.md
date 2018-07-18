@@ -46,6 +46,7 @@ split.h
  
 #include <vector>
 #include <string>
+#include "split.h"
  
 std::vector<std::string> split(const std::string&);
  
