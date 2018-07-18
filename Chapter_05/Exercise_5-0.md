@@ -41,8 +41,8 @@ list<Student_info> extract_fails(list<Student_info>& students)
 
 split.h
 ```Cpp
-#ifndef GUARD_SPLIT_H
-#define GUARD_SPLIT_H
+#ifndef GUARD_split_h
+#define GUARD_split_h
  
 #include <vector>
 #include <string>
