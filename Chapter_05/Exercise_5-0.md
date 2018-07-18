@@ -46,7 +46,6 @@ split.h
  
 #include <vector>
 #include <string>
-#include "split.h"
  
 std::vector<std::string> split(const std::string&);
  
@@ -58,6 +57,7 @@ split.cpp
 #include <cctype>    // for isspace
 #include <string>
 #include <vector>
+#include "split.h"
 
 using std::isspace;
 using std::string;
