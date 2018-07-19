@@ -133,8 +133,8 @@ int main()
 The program below takes in a paragraph, storing each line as a string in a vector, and then outputs the following:
 1. The paragraph
 2. The paragraph inside a frame
-3. The original paragraph and the framed paragraph, concatenated vertically
-4. The original paragraph and the framed paragraph, concatenated horizontally
+3. The paragraph and the framed paragraph, concatenated vertically
+4. The paragraph and the framed paragraph, concatenated horizontally
 
 NOTE: I did not bother splitting the program into multiple files. 
 
